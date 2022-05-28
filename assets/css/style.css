@@ -1,5 +1,33 @@
 body {
-    background-color: red;
+    background-color: #a6e3d1;
+    color: #262928;
     font-family: "Rubik", sans-serif;
 }
 
+/*styling for main header*/
+#title {
+    height: 60px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/*Styling for selection buttons*/
+button {
+    height: 40px;
+    width: 100px;
+    font-size-adjust: 1;
+}
+
+#options {
+    text-align: center;
+}
+
+/*Styling for selection images*/
+
+
+/*Styling for game result*/
+
+
+/*Styling for Scores*/
