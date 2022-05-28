@@ -28,7 +28,9 @@ button {
 
 
 /*Styling for game result*/
-
+.result {
+    text-align: center;
+}
 
 /*Styling for Scores*/
 .scores {
