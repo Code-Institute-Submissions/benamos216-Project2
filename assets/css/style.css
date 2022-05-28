@@ -5,7 +5,7 @@ body {
 }
 
 /*styling for main header*/
-#title {
+.title {
     height: 60px;
 }
 
@@ -20,7 +20,7 @@ button {
     font-size-adjust: 1;
 }
 
-#options {
+.options {
     text-align: center;
 }
 
