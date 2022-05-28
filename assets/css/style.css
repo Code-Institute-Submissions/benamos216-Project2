@@ -31,3 +31,19 @@ button {
 
 
 /*Styling for Scores*/
+.scores {
+    text-align: center;
+    margin: 5px auto;
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+#score {
+    font-weight: bold;
+    color: green;
+}
+
+#incorrect {
+    font-weight: bold;
+    color: red;
+}
