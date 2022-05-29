@@ -51,6 +51,11 @@ button {
     height: 100px;
 }
 
+.winner {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
 /*Styling for Scores*/
 .scores {
     text-align: center;
