@@ -22,14 +22,33 @@ button {
 
 .options {
     text-align: center;
+    padding-bottom: 20px;
 }
 
 /*Styling for selection images*/
+.pictures {
+    height: 300px;
+    text-align: center;
+}
 
+.playerimage {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.computerimage {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
 
 /*Styling for game result*/
 .result {
     text-align: center;
+    height: 100px;
 }
 
 /*Styling for Scores*/
