@@ -61,13 +61,27 @@ function game(userChoice) {
     const computerChoice = getComputerChoice();
     switch (userChoice + computerChoice) {
         case "rs":
+        case "rl":
         case "pr":
+        case "pk":
         case "sp":
+        case "sl":
+        case "lp":
+        case "lk":
+        case "kr":
+        case "ks":
             win(userChoice, computerChoice);
             break;
         case "rp":
+        case "rk":
         case "ps":
+        case "pl":
         case "sr":
+        case "sk":
+        case "lr":
+        case "ls":
+        case "kp":
+        case "kl":
             lose(userChoice, computerChoice);
             break;
         case "rr":
