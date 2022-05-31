@@ -1,7 +1,7 @@
 let userScore = 0;
 let computerScore = 0;
-const userScore_span = document.getElementById("userscore");
-const computerScore_span = document.getElementById("computerscore");
+const userScore_span = document.getElementById("score");
+const computerScore_span = document.getElementById("incorrect");
 const scoreBoard = document.querySelector(".scores");
 const result = document.querySelector(".result > p");
 const rock_div = document.getElementById("r");
