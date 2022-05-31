@@ -1,47 +1,29 @@
-
-
-function runGame() {
-
+function computerChoice() {
+    let choices = ['r', 'p', 's', 'l', 'k'];
+    randomNumber = Math.floor(Math.random() * 5);
+    return choices[randomNumber];
 }
 
-/**Checks selection made by the user*/
-function checkSelection() {
+const selectWinner = (user1, computerChoice) => {
+    let result = null;
+  
+    const ifVal = (a, b, w) =>
+      user1.choice === a && computerChoice.choice === b ? (result = w) : null;
+  
+    ifVal("rock", "scissors", user1);
+    ifVal("scissors", "paper", user1);
+    ifVal("paper", "rock", user1);
+    ifVal("scissors", "rock", Computer);
+    ifVal("paper", "scissors", Computer);
+    ifVal("rock", "paper", Computer);
+  
+    return result();
+  };
 
-}
-
-/**Calculates whether the player was correct or not */
-function calculateScore() {
-
-}
-
-/**Increments the players score */
-function playerScore() {
-
-}
-
-/**Increments the computers score */
-function computerScore() {
-
-}
-
-/**Works through the possible options of winning or losing, depending on selection made*/
-
-function displayRock() {
-
-}
-
-function displayPaper() {
-
-}
-
-function displayScissors() {
-
-}
-
-function displayLizard() {
-
-}
-
-function displaySpock() {
-
+function result() {
+    if (w===user1) {
+    result.innerHTML = `${convertToWord(a)} beats ${convertToWord(b)}. Player Wins!`
+    } else {
+        result.innerHTML = `${convertToWord(b)} beats ${convertToWord(a)}. Computer Wins!`
+    }
 }
