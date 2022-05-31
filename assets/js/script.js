@@ -95,7 +95,7 @@ function game(userChoice) {
 
 }
 
-function changeImage(a) {
+function changeImage() {
     document.getElementById("playerimage").src=a.src;
 }
 
