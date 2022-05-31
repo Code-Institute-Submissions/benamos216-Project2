@@ -1,7 +1,7 @@
-/**let userScore = 0;
-let computerScore = 0;*/
-const userScore = document.getElementById("userscore");
-const computerScore = document.getElementById("computerscore");
+let userScore = 0;
+let computerScore = 0;
+const userScore_span = document.getElementById("userscore");
+const computerScore_span = document.getElementById("computerscore");
 const scoreBoard = document.querySelector(".scores");
 const result = document.querySelector(".result > p");
 const rock_div = document.getElementById("r");
@@ -32,8 +32,8 @@ function convertToWord(letter) {
 
 function win(userChoice, computerChoice) {
     userScore++;
-    userScore.innerHTML = userScore;
-    computerScore.innerHTML = computerScore;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
     result.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}. You win!`;
 }
 
@@ -41,16 +41,16 @@ function win(userChoice, computerChoice) {
 
 function lose(userChoice, computerChoice) {
     computerScore++;
-    userScore.innerHTML = userScore;
-    computerScore.innerHTML = computerScore;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
     result.innerHTML = `${convertToWord(computerChoice)} beats ${convertToWord(userChoice)}. You lost!`;
 }
 
 
 
 function draw(userChoice, computerChoice) {
-    userScore.innerHTML = userScore;
-    computerScore.innerHTML = computerScore;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
     result.innerHTML = `${convertToWord(userChoice)} equals ${convertToWord(computerChoice)}. It's a draw!`;
 }
 
