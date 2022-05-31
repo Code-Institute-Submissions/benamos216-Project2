@@ -49,6 +49,8 @@ button {
 .result {
     text-align: center;
     height: 100px;
+    font-weight: bolder;
+    font-size: xxx-large;
 }
 
 .winner {
