@@ -95,14 +95,16 @@ function game(userChoice) {
 
 }
 
-
+function changeImage(userChoice, computerChoice) {
+    if (userChoice === 'r', computerChoice === 'r') {
+        document.getElementsByClassName("playerimage").src "assets/images/spock-icon-4.jpg"
+    }
+}
 
 function main() {
 
     rock_div.addEventListener('click', function () {
         game("r");
-        image=document.getElementsByClassName("playerimage");
-        image.src = "spock-icon-4.jpg";
     })
     paper_div.addEventListener('click', function () {
         game("p");
@@ -117,7 +119,5 @@ function main() {
         game("k");
     })
 }
-
-
 
 main();
