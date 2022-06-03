@@ -29,7 +29,7 @@ function playGame (playerChoice) {
 
 }
 
-function checkWinner (choices[playerChoice], choices[computerChoice]) {
+function checkWinner (playerChoice, computerChoice) {
 
     if (playerChoice === computerChoice) {
         return outcome.innerHTML = `Tie`;
