@@ -103,12 +103,12 @@ function checkWinner (playerChoice, computerChoice) {
 function updateScore () {
 
     if (result === "win") {
-        userScore++;
-        userScore.innerHTML = userScore;
+        playerScore++;
+        playerScore.innerHTML = playerScore;
         computerScore.innerHTML = computerScore;
     } else if (result === "lose") {
         computerScore++;
-        userScore.innerHTML = userScore;
+        playerScore.innerHTML = playerScore;
         computerScore.innerHTML = computerScore;
     }
 }
