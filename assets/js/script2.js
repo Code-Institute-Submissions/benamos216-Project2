@@ -37,12 +37,16 @@ function checkWinner (playerChoice, computerChoice) {
 
     if (playerChoice === "Rock") {
         if (computerChoice === "Scissors") {
+            outcome = "win";
             return outcome.innerHTML = `Rock blunts Scissors`;
         } else if (computerChoice === "Lizard") {
+            outcome = "win";
             return outcome.innerHTML = `Rock crushes Lizard`;
         } else if (computerChoice === "Paper") {
+            outcome = "lose"
             return outcome.innerHTML = `Paper covers Rock`;
         } else if (computerChoice === "Spock") {
+            outcome = "lose"
             return outcome.innerHTML = `Spock vaporises Rock`;
         }
     }
@@ -98,4 +102,13 @@ function checkWinner (playerChoice, computerChoice) {
 
 function updateScore () {
 
+    if (outcome === "win") {
+        userScore++;
+        userScore.innerHTML = userScore;
+        computerScore.innerHTML = computerScore;
+    } else if (outcome === "lose") {
+        computerScore++;
+        userScore.innerHTML = userScore;
+        computerScore.innerHTML = computerScore;
+    }
 }
