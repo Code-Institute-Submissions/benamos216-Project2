@@ -119,7 +119,7 @@ function checkWinner (playerChoice, computerChoice) {
     }
 }
 
-function updateScore (result) {
+function updateScore () {
 
     if (result === "win") {
         playerScore++;
