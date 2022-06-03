@@ -34,6 +34,7 @@ function playGame (playerChoice) {
 function checkWinner (playerChoice, computerChoice) {
 
     if (playerChoice === computerChoice) {
+        outcome = "tie";
         return outcome.innerHTML = `Tie`;
     }
 
@@ -126,6 +127,9 @@ function updateScore () {
         computerScore_Update.innerHTML = computerScore;
     } else if (result === "lose") {
         computerScore++;
+        playerScore_Update.innerHTML = playerScore;
+        computerScore_Update.innerHTML = computerScore;
+    } else if (result === "tie") {
         playerScore_Update.innerHTML = playerScore;
         computerScore_Update.innerHTML = computerScore;
     }
