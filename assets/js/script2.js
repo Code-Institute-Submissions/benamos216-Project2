@@ -46,6 +46,54 @@ function checkWinner (playerChoice, computerChoice) {
             return outcome.innerHTML = `Spock vaporises Rock`;
         }
     }
+
+    if (playerChoice === "Paper") {
+        if (computerChoice === "Rock") {
+            return outcome.innerHTML = `Paper covers Rock`;
+        } else if (computerChoice === "Spock") {
+            return outcome.innerHTML = `Paper disproves Spock`;
+        } else if (computerChoice === "Scissors") {
+            return outcome.innerHTML = `Scissors cuts Paper`;
+        } else if (computerChoice === "Lizard") {
+            return outcome.innerHTML = `Lizard eats Paper`;
+        }
+    }
+
+    if (playerChoice === "Scissors") {
+        if (computerChoice === "Paper") {
+            return outcome.innerHTML = `Scissors cuts Paper`;
+        } else if (computerChoice === "Lizard") {
+            return outcome.innerHTML = `Scissors decapitates Lizard`;
+        } else if (computerChoice === "Rock") {
+            return outcome.innerHTML = `Rock blunts Scissors`;
+        } else if (computerChoice === "Spock") {
+            return outcome.innerHTML = `Spock smashes Scissors`;
+        }
+    }
+
+    if (playerChoice === "Lizard") {
+        if (computerChoice === "Paper") {
+            return outcome.innerHTML = `Lizard eats Paper`;
+        } else if (computerChoice === "Spock") {
+            return outcome.innerHTML = `Lizard poisons Spock`;
+        } else if (computerChoice === "Rock") {
+            return outcome.innerHTML = `Rock smashes Lizard`;
+        } else if (computerChoice === "Scissors") {
+            return outcome.innerHTML = `Scissors decapitates Lizard`;
+        }
+    }
+
+    if (playerChoice === "Spock") {
+        if (computerChoice === "Rock") {
+            return outcome.innerHTML = `Spock vaporises Rock`;
+        } else if (computerChoice === "Scissors") {
+            return outcome.innerHTML = `Spock smashes Scissors`;
+        } else if (computerChoice === "Paper") {
+            return outcome.innerHTML = `Paper disproves Spock`;
+        } else if (computerChoice === "Lizard") {
+            return outcome.innerHTML = `Lizard poisons Spock`;
+        }
+    }
 }
 
 function updateScore () {
