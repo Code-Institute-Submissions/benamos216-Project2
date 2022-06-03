@@ -4,18 +4,21 @@ const userScore_span = document.getElementById("score");
 const computerScore_span = document.getElementById("incorrect");
 const scoreBoard = document.querySelector(".scores");
 const result = document.querySelector(".result > p");
+const computerImage = document.getElementById("computerimage");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 const lizard_div = document.getElementById("l");
 const spock_div = document.getElementById("k");
-
+const choices = ['r', 'p', 's', 'l', 'k'];
 
 
 function getComputerChoice() {
-	const choices = ['r', 'p', 's', 'l', 'k'];
 	const randomNumber = Math.floor(Math.random() * 5);
 	return choices[randomNumber];
+
+    computerImage.src = `assets/images/${choices[computerChoice]}.jpg`;
+    computerImage.alt = choices[computerChoice];
 }
 
 
