@@ -25,7 +25,7 @@ function playGame (playerChoice) {
 
     let result = checkWinner (choices[playerChoice], choices[computerChoice]);
 
-    updateScores(result);
+    updateScore(result);
 
 }
 
@@ -37,16 +37,16 @@ function checkWinner (playerChoice, computerChoice) {
 
     if (playerChoice === "Rock") {
         if (computerChoice === "Scissors") {
-            outcome = "win";
+            result = "win";
             return outcome.innerHTML = `Rock blunts Scissors`;
         } else if (computerChoice === "Lizard") {
-            outcome = "win";
+            result = "win";
             return outcome.innerHTML = `Rock crushes Lizard`;
         } else if (computerChoice === "Paper") {
-            outcome = "lose"
+            result = "lose"
             return outcome.innerHTML = `Paper covers Rock`;
         } else if (computerChoice === "Spock") {
-            outcome = "lose"
+            result = "lose"
             return outcome.innerHTML = `Spock vaporises Rock`;
         }
     }
@@ -102,11 +102,11 @@ function checkWinner (playerChoice, computerChoice) {
 
 function updateScore () {
 
-    if (outcome === "win") {
+    if (result === "win") {
         userScore++;
         userScore.innerHTML = userScore;
         computerScore.innerHTML = computerScore;
-    } else if (outcome === "lose") {
+    } else if (result === "lose") {
         computerScore++;
         userScore.innerHTML = userScore;
         computerScore.innerHTML = computerScore;
