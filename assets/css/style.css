@@ -38,7 +38,7 @@ button {
     object-position: center;
 }
 
-.computerimage {
+#computerimage {
     width: 300px;
     height: 300px;
     object-fit: cover;
