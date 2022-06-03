@@ -1,6 +1,8 @@
+let playerScore = 0;
+let computerScore = 0;
 const buttons = document.getElementsByClassName("control");
-const playerScore = document.getElementById("score");
-const computerScore = document.getElementById("incorrect");
+const playerScore_Update = document.getElementById("score");
+const computerScore_Update = document.getElementById("incorrect");
 const playerImage = document.getElementById("playerimage");
 const computerImage = document.getElementById("computerimage");
 const outcome = document.querySelector(".result > p");
@@ -104,11 +106,11 @@ function updateScore () {
 
     if (result === "win") {
         playerScore++;
-        playerScore.innerHTML = playerScore;
-        computerScore.innerHTML = computerScore;
+        playerScore_Update.innerHTML = playerScore;
+        computerScore_Update.innerHTML = computerScore;
     } else if (result === "lose") {
         computerScore++;
-        playerScore.innerHTML = playerScore;
-        computerScore.innerHTML = computerScore;
+        playerScore_Update.innerHTML = playerScore;
+        computerScore_Update.innerHTML = computerScore;
     }
 }
