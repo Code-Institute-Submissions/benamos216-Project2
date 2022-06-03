@@ -34,7 +34,7 @@ function playGame (playerChoice) {
 function checkWinner (playerChoice, computerChoice) {
 
     if (playerChoice === computerChoice) {
-        outcome = "tie";
+        result = "tie";
         return outcome.innerHTML = `Tie`;
     }
 
