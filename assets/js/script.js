@@ -62,10 +62,10 @@ function checkWinner (playerChoice, computerChoice) {
             result = "win";
             return outcome.innerHTML = `Rock crushes Lizard`;
         } else if (computerChoice === "Paper") {
-            result = "lose"
+            result = "lose";
             return outcome.innerHTML = `Paper covers Rock`;
         } else if (computerChoice === "Spock") {
-            result = "lose"
+            result = "lose";
             return outcome.innerHTML = `Spock vaporises Rock`;
         }
     }
@@ -78,10 +78,10 @@ function checkWinner (playerChoice, computerChoice) {
             result = "win";
             return outcome.innerHTML = `Paper disproves Spock`;
         } else if (computerChoice === "Scissors") {
-            result = "lose"
+            result = "lose";
             return outcome.innerHTML = `Scissors cuts Paper`;
         } else if (computerChoice === "Lizard") {
-            result = "lose"
+            result = "lose";
             return outcome.innerHTML = `Lizard eats Paper`;
         }
     }
@@ -94,10 +94,10 @@ function checkWinner (playerChoice, computerChoice) {
             result = "win";
             return outcome.innerHTML = `Scissors decapitates Lizard`;
         } else if (computerChoice === "Rock") {
-            result = "lose"
+            result = "lose";
             return outcome.innerHTML = `Rock blunts Scissors`;
         } else if (computerChoice === "Spock") {
-            result = "lose"
+            result = "lose";
             return outcome.innerHTML = `Spock smashes Scissors`;
         }
     }
@@ -110,10 +110,10 @@ function checkWinner (playerChoice, computerChoice) {
             result = "win";
             return outcome.innerHTML = `Lizard poisons Spock`;
         } else if (computerChoice === "Rock") {
-            result = "lose"
+            result = "lose";
             return outcome.innerHTML = `Rock smashes Lizard`;
         } else if (computerChoice === "Scissors") {
-            result = "lose"
+            result = "lose";
             return outcome.innerHTML = `Scissors decapitates Lizard`;
         }
     }
@@ -126,10 +126,10 @@ function checkWinner (playerChoice, computerChoice) {
             result = "win";
             return outcome.innerHTML = `Spock smashes Scissors`;
         } else if (computerChoice === "Paper") {
-            result = "lose"
+            result = "lose";
             return outcome.innerHTML = `Paper disproves Spock`;
         } else if (computerChoice === "Lizard") {
-            result = "lose"
+            result = "lose";
             return outcome.innerHTML = `Lizard poisons Spock`;
         }
     }
