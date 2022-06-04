@@ -56,6 +56,7 @@ button {
 /*Styling for Scores*/
 .scores {
     text-align: center;
+    font-weight: bold;
     margin: 5px auto;
     width: 50%;
     font-size: 1.2rem;
@@ -73,8 +74,8 @@ button {
 
 /* Media queries */
 
-/* For medium screens 480px and smaller */
-@media screen and (max-width: 600px) {
+/* For medium screens 620px and smaller */
+@media screen and (max-width: 620px) {
     
     .title {
         height: 40px;
@@ -95,17 +96,13 @@ button {
     }
     
     #playerimage {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    object-position: center;
+    width: 200px;
+    height: 200px;
     }
     
     #computerimage {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    object-position: center;
+    width: 200px;
+    height: 200px;
     }
 }
 
@@ -117,13 +114,13 @@ button {
     }
     
     h1 {
-        font-size: x-large;
+        font-size: larger;
     }
     
     button {
         height: 30px;
-        width: 80px;
-        font-size-adjust: .8;
+        width: 60px;
+        font-size-adjust: .6;
     }
     
     .pictures {
@@ -131,17 +128,22 @@ button {
     }
     
     #playerimage {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
+    width: 160px;
+    height: 160px;
     }
     
     #computerimage {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
+    width: 160px;
+    height: 160px;
+    }
+    
+    .result {
+    height: 40px;
+    font-size: x-large;
+    }
+    
+    .scores {
+    width: 70%;
     }
 }
 
@@ -169,29 +171,19 @@ button {
     #playerimage {
     width: 150px;
     height: 150px;
-    object-fit: cover;
-    object-position: center;
     }
     
     #computerimage {
     width: 150px;
     height: 150px;
-    object-fit: cover;
-    object-position: center;
     }
     
     .result {
-    text-align: center;
     height: 40px;
-    font-weight: bolder;
     font-size: x-large;
     }
 
     .scores {
-    text-align: center;
-    font-weight: bold;
-    margin: 5px auto;
     width: 70%;
-    font-size: 1.2rem;
     }
 }
