@@ -1,3 +1,8 @@
+/**
+ * Declare constants for DOM elements
+ * and choices for game, also declared
+ * starting scores
+ */
 let playerScore = 0;
 let computerScore = 0;
 const buttons = document.getElementsByClassName("control");
@@ -8,6 +13,9 @@ const computerImage = document.getElementById("computerimage");
 const outcome = document.querySelector(".result > p");
 const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 
+/**
+ * Add event listeners for buttons
+ */
 for (let button of buttons) {
     button.addEventListener ("click", function() {
         let playerChoice = this.getAttribute("data-choice");
@@ -15,6 +23,9 @@ for (let button of buttons) {
     });
 }
 
+/**
+ * Main function to run game
+ */
 function playGame (playerChoice) {
 
     playerImage.src = `assets/images/${choices[playerChoice]}.jpg`;
@@ -31,6 +42,11 @@ function playGame (playerChoice) {
 
 }
 
+/**
+ * Check winner depending on the choices made by
+ * the user and computer, which then returns a result
+ * and outcome.
+ */
 function checkWinner (playerChoice, computerChoice) {
 
     if (playerChoice === computerChoice) {
@@ -119,6 +135,10 @@ function checkWinner (playerChoice, computerChoice) {
     }
 }
 
+/**
+ * Increments score depending on outcome of the 
+ * result from checkWinner function
+ */
 function updateScore () {
 
     if (result === "win") {
