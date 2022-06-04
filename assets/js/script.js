@@ -1,125 +1,136 @@
-let userScore = 0;
+let playerScore = 0;
 let computerScore = 0;
-const userScore_span = document.getElementById("score");
-const computerScore_span = document.getElementById("incorrect");
-const scoreBoard = document.querySelector(".scores");
-const result = document.querySelector(".result > p");
+const buttons = document.getElementsByClassName("control");
+const playerScore_Update = document.getElementById("score");
+const computerScore_Update = document.getElementById("incorrect");
+const playerImage = document.getElementById("playerimage");
 const computerImage = document.getElementById("computerimage");
-const rock_div = document.getElementById("r");
-const paper_div = document.getElementById("p");
-const scissors_div = document.getElementById("s");
-const lizard_div = document.getElementById("l");
-const spock_div = document.getElementById("k");
-const choices = ['r', 'p', 's', 'l', 'k'];
+const outcome = document.querySelector(".result > p");
+const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 
+for (let button of buttons) {
+    button.addEventListener ("click", function() {
+        let playerChoice = this.getAttribute("data-choice");
+        playGame(playerChoice);
+    });
+}
 
-function getComputerChoice() {
-	const randomNumber = Math.floor(Math.random() * 5);
-	return choices[randomNumber];
+function playGame (playerChoice) {
+
+    playerImage.src = `assets/images/${choices[playerChoice]}.jpg`;
+    playerImage.alt = choices[playerChoice];
+
+    let computerChoice = Math.floor(Math.random() * 5);
 
     computerImage.src = `assets/images/${choices[computerChoice]}.jpg`;
     computerImage.alt = choices[computerChoice];
+
+    let result = checkWinner (choices[playerChoice], choices[computerChoice]);
+
+    updateScore(result);
+
 }
 
+function checkWinner (playerChoice, computerChoice) {
 
-
-function convertToWord(letter) {
-    if (letter === "r") return "Rock";
-    if (letter === "p") return "Paper";
-    if (letter === "s") return "Scissors";
-    if (letter === "l") return "Lizard";
-    if (letter === "k") return "Spock";
-}
-
-
-
-function win(userChoice, computerChoice) {
-    userScore++;
-    userScore_span.innerHTML = userScore;
-    computerScore_span.innerHTML = computerScore;
-    result.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}. You win!`;
-}
-
-
-
-function lose(userChoice, computerChoice) {
-    computerScore++;
-    userScore_span.innerHTML = userScore;
-    computerScore_span.innerHTML = computerScore;
-    result.innerHTML = `${convertToWord(computerChoice)} beats ${convertToWord(userChoice)}. You lost!`;
-}
-
-
-
-function draw(userChoice, computerChoice) {
-    userScore_span.innerHTML = userScore;
-    computerScore_span.innerHTML = computerScore;
-    result.innerHTML = `${convertToWord(userChoice)} equals ${convertToWord(computerChoice)}. It's a draw!`;
-}
-
-
-
-function game(userChoice) {
-
-    const computerChoice = getComputerChoice();
-    switch (userChoice + computerChoice) {
-        case "rs":
-        case "rl":
-        case "pr":
-        case "pk":
-        case "sp":
-        case "sl":
-        case "lp":
-        case "lk":
-        case "kr":
-        case "ks":
-            win(userChoice, computerChoice);
-            break;
-        case "rp":
-        case "rk":
-        case "ps":
-        case "pl":
-        case "sr":
-        case "sk":
-        case "lr":
-        case "ls":
-        case "kp":
-        case "kl":
-            lose(userChoice, computerChoice);
-            break;
-        case "rr":
-        case "pp":
-        case "ss":
-        case "ll":
-        case "kk":
-            draw(userChoice, computerChoice);
-            break;
+    if (playerChoice === computerChoice) {
+        result = "tie";
+        return outcome.innerHTML = `Tie`;
     }
 
+    if (playerChoice === "Rock") {
+        if (computerChoice === "Scissors") {
+            result = "win";
+            return outcome.innerHTML = `Rock blunts Scissors`;
+        } else if (computerChoice === "Lizard") {
+            result = "win";
+            return outcome.innerHTML = `Rock crushes Lizard`;
+        } else if (computerChoice === "Paper") {
+            result = "lose"
+            return outcome.innerHTML = `Paper covers Rock`;
+        } else if (computerChoice === "Spock") {
+            result = "lose"
+            return outcome.innerHTML = `Spock vaporises Rock`;
+        }
+    }
+
+    if (playerChoice === "Paper") {
+        if (computerChoice === "Rock") {
+            result = "win";
+            return outcome.innerHTML = `Paper covers Rock`;
+        } else if (computerChoice === "Spock") {
+            result = "win";
+            return outcome.innerHTML = `Paper disproves Spock`;
+        } else if (computerChoice === "Scissors") {
+            result = "lose"
+            return outcome.innerHTML = `Scissors cuts Paper`;
+        } else if (computerChoice === "Lizard") {
+            result = "lose"
+            return outcome.innerHTML = `Lizard eats Paper`;
+        }
+    }
+
+    if (playerChoice === "Scissors") {
+        if (computerChoice === "Paper") {
+            result = "win";
+            return outcome.innerHTML = `Scissors cuts Paper`;
+        } else if (computerChoice === "Lizard") {
+            result = "win";
+            return outcome.innerHTML = `Scissors decapitates Lizard`;
+        } else if (computerChoice === "Rock") {
+            result = "lose"
+            return outcome.innerHTML = `Rock blunts Scissors`;
+        } else if (computerChoice === "Spock") {
+            result = "lose"
+            return outcome.innerHTML = `Spock smashes Scissors`;
+        }
+    }
+
+    if (playerChoice === "Lizard") {
+        if (computerChoice === "Paper") {
+            result = "win";
+            return outcome.innerHTML = `Lizard eats Paper`;
+        } else if (computerChoice === "Spock") {
+            result = "win";
+            return outcome.innerHTML = `Lizard poisons Spock`;
+        } else if (computerChoice === "Rock") {
+            result = "lose"
+            return outcome.innerHTML = `Rock smashes Lizard`;
+        } else if (computerChoice === "Scissors") {
+            result = "lose"
+            return outcome.innerHTML = `Scissors decapitates Lizard`;
+        }
+    }
+
+    if (playerChoice === "Spock") {
+        if (computerChoice === "Rock") {
+            result = "win";
+            return outcome.innerHTML = `Spock vaporises Rock`;
+        } else if (computerChoice === "Scissors") {
+            result = "win";
+            return outcome.innerHTML = `Spock smashes Scissors`;
+        } else if (computerChoice === "Paper") {
+            result = "lose"
+            return outcome.innerHTML = `Paper disproves Spock`;
+        } else if (computerChoice === "Lizard") {
+            result = "lose"
+            return outcome.innerHTML = `Lizard poisons Spock`;
+        }
+    }
 }
 
-function changeImage() {
-    document.getElementById("playerimage").src=a.src;
+function updateScore () {
+
+    if (result === "win") {
+        playerScore++;
+        playerScore_Update.innerHTML = playerScore;
+        computerScore_Update.innerHTML = computerScore;
+    } else if (result === "lose") {
+        computerScore++;
+        playerScore_Update.innerHTML = playerScore;
+        computerScore_Update.innerHTML = computerScore;
+    } else if (result === "tie") {
+        playerScore_Update.innerHTML = playerScore;
+        computerScore_Update.innerHTML = computerScore;
+    }
 }
-
-function main() {
-
-    rock_div.addEventListener('click', function () {
-        game("r");
-        changeImage("spock-icon-4.jpg")
-    })
-    paper_div.addEventListener('click', function () {
-        game("p");
-    })
-    scissors_div.addEventListener('click', function () {
-        game("s");
-    })
-    lizard_div.addEventListener('click', function () {
-        game("l");
-    })
-    spock_div.addEventListener('click', function () {
-        game("k");
-    })
-}
-
-main();

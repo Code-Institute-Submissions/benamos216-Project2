@@ -48,7 +48,7 @@ button {
 /*Styling for game result*/
 .result {
     text-align: center;
-    height: 100px;
+    height: 60px;
     font-weight: bolder;
     font-size: xxx-large;
 }
@@ -62,7 +62,7 @@ button {
 .scores {
     text-align: center;
     margin: 5px auto;
-    width: 60%;
+    width: 50%;
     font-size: 1.2rem;
 }
 
