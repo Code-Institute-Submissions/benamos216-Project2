@@ -53,11 +53,6 @@ button {
     font-size: xxx-large;
 }
 
-.winner {
-    font-weight: bold;
-    font-size: xx-large;
-}
-
 /*Styling for Scores*/
 .scores {
     text-align: center;
@@ -74,4 +69,93 @@ button {
 #incorrect {
     font-weight: bold;
     color: red;
+}
+
+/* Media queries */
+
+/* For medium screens 480px and smaller */
+@media screen and (max-width: 480px) {
+    
+    .title {
+        height: 40px;
+    }
+    
+    h1 {
+        font-size: x-large;
+    }
+    
+    button {
+        height: 30px;
+        width: 80px;
+        font-size-adjust: .8;
+    }
+    
+    .pictures {
+        height: 200px;
+    }
+    
+    #playerimage {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    }
+    
+    #computerimage {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    }
+}
+
+/* For small screens 320px and smaller */
+@media screen and (max-width: 320px) {
+    
+    .title {
+        height: 30px;
+    }
+    
+    h1 {
+        font-size: medium;
+    }
+    
+    button {
+        height: 20px;
+        width: 50px;
+        font-size-adjust: .5;
+    }
+    
+    .pictures {
+        height: 150px;
+    }
+    
+    #playerimage {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    }
+    
+    #computerimage {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    }
+    
+    .result {
+    text-align: center;
+    height: 40px;
+    font-weight: bolder;
+    font-size: x-large;
+    }
+
+    .scores {
+    text-align: center;
+    font-weight: bold;
+    margin: 5px auto;
+    width: 70%;
+    font-size: 1.2rem;
+    }
 }
