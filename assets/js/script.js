@@ -38,7 +38,7 @@ function playGame (playerChoice) {
 
     let result = checkWinner (choices[playerChoice], choices[computerChoice]);
 
-    updateScore(result);
+    updateScore(result);    
 
 }
 
@@ -145,20 +145,12 @@ function updateScore () {
         playerScore++;
         playerScore_Update.innerHTML = playerScore;
         computerScore_Update.innerHTML = computerScore;
-        
-        if (playerScore === 10) {
-            return outcome.innerHTML = `Player Wins!`
-        }
 
     } else if (result === "lose") {
         computerScore++;
         playerScore_Update.innerHTML = playerScore;
         computerScore_Update.innerHTML = computerScore;
 
-        if (computerScore === 10) {
-            return outcome.innerHTML = `Computer Wins!`
-        }
-        
     } else if (result === "tie") {
         playerScore_Update.innerHTML = playerScore;
         computerScore_Update.innerHTML = computerScore;
